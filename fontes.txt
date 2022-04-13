@@ -1,0 +1,66 @@
+/* -------- FONTS> -------- */
+@font-face {
+    font-family: 'Belfast Grotesk';
+    src: url('fonts/Belfast-Grotesk-Regular.woff2') format('woff2');
+    font-weight: lighter;
+    font-style: normal;} 
+/* Belfast Grotesk Regular */
+@font-face {
+    font-family: 'Belfast Grotesk';
+    src: url('fonts/Belfast-Grotesk-Medium.woff2') format('woff2');
+    font-weight: medium;
+    font-style: normal;} 
+/* Belfast Grotesk Medium */
+@font-face {
+    font-family: 'Belfast Grotesk';
+    src: url('fonts/Belfast-Grotesk-Bold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;} 
+/* Belfast Grotesk Bold */
+@font-face {
+    font-family: 'Hagrid';
+    src: url('fonts/Hagrid-Regular-trial.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;}
+/* Hagrid Regular */
+@font-face {
+    font-family: 'Hagrid Text';
+    src: url('fonts/Hagrid-Text-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;}
+/* Hagrid Text Regular */
+@font-face {
+    font-family: 'Hagrid';
+    src: url('fonts/Hagrid-Italic-trial.woff2') format('woff2');
+    font-weight: normal;
+    font-style: italic;}
+/* Hagrid Italic */
+@font-face {
+    font-family: 'Oddlini';
+    src: url('fonts/Oddlini-MediumSemiExpanded.woff2') format('woff2');
+    font-weight: medium;
+    font-style: normal;}
+/* Oddlini Medium, Semi Expanded */
+@font-face {
+    font-family: 'Hagrid';
+    src: url('fonts/Oddlini-SemiBoldExtraExpanded.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;}
+/* Oddlini SemiBold, Extra Expanded */
+@font-face {
+    font-family: 'Space Grotesk';
+    src: url('fonts/SpaceGrotesk-Medium.woff2') format('woff2');
+    font-weight: medium;
+    font-style: normal;} 
+/* Space Grotesk Medium */
+@font-face {
+    font-family: 'Syne';
+    src: url('fonts/Syne-Bold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;} 
+/* Syne Bold */
+/* -------- <FONTS -------- */
+
+:root {
+    --belfast-grotesk-regular: 'Belfast Grotesk';
+}

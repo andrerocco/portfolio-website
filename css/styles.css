@@ -1,0 +1,572 @@
+/* -------- FONTS> -------- */
+/* Belfast Grotesk Regular */
+@font-face {
+    font-family: 'Belfast Grotesk';
+    src: url('fonts/temp/Belfast-Grotesk-Regular.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;} 
+/* Belfast Grotesk Medium */
+@font-face {
+    font-family: 'Belfast Grotesk';
+    src: url('fonts/temp/Belfast-Grotesk-Medium.ttf') format('truetype');
+    font-weight: medium;
+    font-style: normal;} 
+/* Belfast Grotesk Bold */
+@font-face {
+    font-family: 'Belfast Grotesk';
+    src: url('fonts/temp/Belfast-Grotesk-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;} 
+/* Hagrid Regular */
+@font-face {
+    font-family: 'Hagrid';
+    src: url('fonts/temp/Hagrid-Regular-trial.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;}
+/* Hagrid Italic */
+@font-face {
+    font-family: 'Hagrid';
+    src: url('fonts/temp/Hagrid-Italic-trial.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;}
+/* Oddlini Regular, Expanded */
+@font-face {
+    font-family: 'Oddlini';
+    src: url('fonts/temp/Oddlini-RegularExpanded.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;}
+/* Oddlini Medium, Semi Expanded */
+@font-face {
+    font-family: 'Oddlini';
+    src: url('fonts/Oddlini-MediumSemiExpanded.woff2') format('woff2');
+    font-weight: medium;
+    font-style: normal;}
+/* Oddlini SemiBold, Extra Expanded */
+@font-face {
+    font-family: 'Oddlini';
+    src: url('fonts/temp/Oddlini-SemiBoldExtraExpanded.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;}
+/* Space Grotesk Medium */
+@font-face {
+    font-family: 'Space Grotesk';
+    src: url('fonts/temp/SpaceGrotesk-Medium.ttf') format('truetype');
+    font-weight: medium;
+    font-style: normal;} 
+/* Syne Bold */
+@font-face {
+    font-family: 'Syne';
+    src: url('fonts/temp/Syne-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;} 
+/* -------- <FONTS -------- */
+
+
+/* -------- SCROLLBAR SETTINGS> -------- */
+::-webkit-scrollbar {
+    width: 4px;
+} /* Width */
+::-webkit-scrollbar-track {
+    background: #f9f9f9;
+} /* Track */
+::-webkit-scrollbar-thumb {
+    background: rgb(145, 145, 145);
+} /* Handle */
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(104, 104, 104);
+} /* Handle on hover */
+/* -------- <SCROLLBAR SETTINGS -------- */
+
+
+/* -------- ROOT> -------- */
+:root {
+    --color-text-dark: rgb(26, 26, 26) !important;
+    --color-text-brown: rgb(89, 82, 80);
+}
+/* -------- <ROOT -------- */
+
+
+/* -------- MENU DE NAVEGAÇÃO FIXO> -------- */
+#fixed-nav header {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+
+    margin-top: 46px;
+    margin-left: 21px;
+
+    font-family: 'Oddlini';
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--color-text-dark);
+}
+#fixed-nav aside {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    right: 0;
+
+    height: 100vh;
+    width: 42px;
+    overflow: visible;
+    background-color: white;
+    border-left: 2px solid var(--color-text-dark);
+    padding-right: 4px;
+
+    mix-blend-mode:saturation;
+
+    display: flex; /* Define a distribuição dos <a> igualmente no <nav> */
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+#fixed-nav aside a {
+    transform-origin: center center;
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg); /* Safari */
+    -moz-transform: rotate(90deg); /* Firefox */
+    -ms-transform: rotate(90deg); /* IE */
+    -o-transform: rotate(90deg); /* Opera */
+
+    font-family: 'Oddlini';
+    font-weight: 600;
+    font-size: 22px;
+    color: var(--color-text-dark);
+}
+#fixed-nav header div a:hover {
+    text-decoration: underline;
+}
+/* -------- <MENU DE NAVEGAÇÃO FIXO -------- */
+
+
+/* -------- CONTENT SETTINGS> -------- */
+#grained-overlay {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: 101;
+}
+
+* { margin: 0; padding: 0; }
+body { margin: 0; padding: 0; }
+a { color: inherit; text-decoration: inherit; } /* Limpa os pré-estilos dos elementos <a> na página */
+#viewport {
+    overflow: hidden;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;} /* Esse viewport fica fixo durante o scroll e o resto do conteúdo do página sofre transformação */
+#content {
+    overflow: visible;
+    width: 100%;
+    /* set a height because the contents are position: absolute, thus natively there's no height */
+    height: 4225px;
+}
+::selection {
+    color: white;
+    background: black;} /* Muda a cor do texto selecionado */
+::-moz-selection {
+    color: white;
+    background: black;} /* Muda a cor do texto selecionado, para o Firefox */
+.no-select {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Sem prefixo, atualmente suportado por Chrome, Edge, Opera and Firefox */
+} /* Desabilita o highlight de seleção do elemento */
+/* -------- <CONTENT SETTINGS -------- */
+
+
+/* -------- HOME PAGE CONTENT> -------- */
+#cut-limiter {
+    padding-right: 47px;
+}
+#andre-rocco-div {
+    width: 100%;
+    cursor: default;
+}
+#andre-rocco-h1 {
+    font-family: 'Syne';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 284px;
+    color: var(--color-text-dark);
+    
+    overflow: hidden; /* Faz com que o #cut-limiter corte o pedaço que fica atrás do nav */
+
+    white-space: nowrap;
+    margin: 0;
+    margin-top: 140px;
+    margin-bottom: 70px;
+}
+#andre-rocco-gsap {
+    margin-left: 8vw;
+}
+
+#h2-desginer-developer {
+    font-family: 'Hagrid';
+    font-weight: normal;
+    font-style: italic;
+    font-size: 136px;
+    height: 200px;
+    text-align: left;
+    color: var(--color-text-dark);
+
+    margin: 0;
+    margin-left: 4vw;
+}
+#text-developer {
+    margin-left: 2vw;
+    transform: translateY(-60px);
+}
+#text-developer img {
+    height: 130px;
+    width: auto;
+    margin-right: 30px;
+    transform: translateY(5px);
+}
+
+#text-designer div { float: left; }
+#text-designer-space { word-spacing: 0px; }
+#text-developer div { float: left; }
+#text-developer-space { word-spacing: 0px; }
+
+#text-about-me {
+    text-align: right;
+    margin-top: 300px;
+    margin-right: 50px;
+    margin-bottom: 320px;
+    padding-right: 120px;
+    padding-left: 39vw;
+}
+#text-about-me h3 {
+    font-family: Hagrid Trial;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 48px;
+
+    color: var(--color-text-brown);
+}
+#text-about-me p {
+    font-family: 'Belfast Grotesk';
+    font-style: normal;
+    font-weight: medium;
+    font-size: 28px;
+    line-height: 133.2%;
+
+    color: var(--color-text-dark);
+}
+
+#works {
+    width: 100%;
+    padding-left: 140px;
+    margin-bottom: 200px;
+}
+#label-works {
+    font-size: 90px;
+    font-family: 'Belfast Grotesk';
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0);
+    -webkit-text-stroke: 1px black;
+    
+    margin-left: 30px;
+    margin-bottom: 50px;
+    overflow: hidden;
+}
+#works ul {
+    list-style-type: none;
+    line-height: 96px;
+    margin-left: 5vw;
+
+    color: var(--color-text-dark);
+}
+.number-li {
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-size: 48px;
+    text-align: right;
+    margin-right: 47px;
+}
+.text-li {
+    font-family: 'Hagrid';
+    font-style: italic;
+    font-size: 78px;
+    border-bottom: 4px solid var(--color-text-dark);
+}
+
+
+/* DRAGGABLE GRID */
+.label-text {
+    font-family: 'Belfast Grotesk';
+    font-weight: bold;
+    font-style: normal;
+    font-size: 16px;
+    color: rgba(75, 74, 74, 0.336);
+}
+#expertises-programming-wrapper { width: 100%; text-align: right; }
+#expertises-designing-wrapper { margin-top: 5px; } /* Controla a distância entre os menus drag */
+#expertises-designing { padding-left: 24px; width: fit-content;}
+.drag-label {
+    margin-bottom: 8px;
+    margin-right: 74px; /* 44px + ... */}
+.drag-scroll {
+    padding: 0;
+    overflow-x: hidden;
+
+    padding-right: 48px; /* Scrollbar = 4px, Menu = 42px, Menu-Border = 2px */}
+
+.items {
+    position: relative;
+    overflow-x: hidden;
+    width: 100%;
+    height: auto;
+    
+    white-space: nowrap;
+    user-select: none;
+    cursor: pointer;}
+.items.active {
+    cursor: grabbing;
+    cursor: -webkit-grabbing;}
+.item {
+    display: inline-block;
+    background-image: url(https://www.taimoorshahzada.com/static/media/noise.93fe26ae.gif);
+
+    height: 212px;
+    width: 353px;
+    margin: 0 8px;
+
+    border: 1px solid rgba(26, 26, 26, var(--noise-cover-opacity));
+    transition: var(--transition);
+}
+:root { --noise-cover-opacity: 0.97; --transition: all 0.5s; }
+.inside-fill {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    white-space: normal;
+
+    background: rgba(26, 26, 26, var(--noise-cover-opacity));
+    transition: var(--transition);
+}
+
+.inside-fill h1 {
+    font-family: 'Hagrid';
+    font-style: normal;
+    font-weight: normal;
+    color: rgb(245, 245, 245);
+
+    padding: 0px 29px;
+    margin-top: 22px;
+
+    transition: var(--transition);
+}
+.inside-fill h2 {
+    font-family: 'Belfast Grotesk';
+    font-style: normal;
+    font-weight: 100;
+    font-size: 11px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.83);
+
+    padding: 0px 29px;
+    margin-top: 16px;
+
+    transition: var(--transition);
+}
+.inside-fill h3 {
+    font-family: 'Hagrid';
+    font-style: italic;
+    font-size: 12px;
+    font-weight: 100;
+    color: rgba(255, 255, 255, 0.8);
+
+    padding: 0px 29px;
+    position: absolute;
+    bottom: 32px;
+
+    transition: var(--transition);
+}
+.inside-fill p {
+    font-family: 'Hagrid';
+    font-style: normal;
+    font-size: 12px;
+    font-weight: 100;
+    color: rgba(255, 255, 255, 0.8);
+
+    padding: 0px 29px;
+    position: absolute;
+    bottom: 37px;
+
+    transition: var(--transition);
+}
+
+.medal-icon {
+    transform: translateY(5px);
+    transition: var(--transition);
+}
+/* HOVER STATES FOR THE DRAG MENU */
+.item:hover { border: 1px solid rgba(26, 26, 26, var(--noise-cover-opacity)); }
+.item:hover .inside-fill { background: rgba(243, 243, 243, var(--noise-cover-opacity)); }
+.item:hover .inside-fill h1 { color: rgb(14, 14, 14); }
+.item:hover .inside-fill h2 { color: rgba(0, 0, 0, 0.83); }
+.item:hover .inside-fill h3 { color: rgba(0, 0, 0, 0.8) }
+.item:hover .inside-fill p { color: rgba(0, 0, 0, 0.8); }
+.item:hover .medal-icon { color: #aeb113; }
+
+.drag-to-see-more {
+    width: 100%;
+    text-align: right;
+    transform: translateY(-3px);
+}
+.text-drag-to-see-more {
+    margin-right: 60px; /* 42px + ...px */
+
+    font-family: 'Hagrid';
+    font-style: italic;
+    font-weight: normal;
+    font-size: 12px;
+
+    color: #8a8f96be;
+}
+
+
+#contact-me-section {
+    margin-top: 350px;
+    margin-left: 112px;
+    margin-bottom: 294px;
+}
+#text-contact {
+    font-family: 'Hagrid';
+    font-style: italic;
+    font-size: 144px;
+
+    color: #ECD825;
+
+    overflow: hidden; /* GSAP */
+}
+#text-email {
+    margin-top: 20px;
+    width: fit-content;
+
+    font-family: 'Belfast Grotesk';
+    font-style: medium;
+    font-weight: normal;
+    font-size: 60px;
+
+    cursor: pointer;
+
+    color: var(--color-text-dark);
+
+    overflow: hidden; /* GSAP */
+}
+.underline {
+    border-bottom: 3px solid var(--color-text-dark);
+    width: 870px;
+    transform: translateY(-3px);
+}
+
+#text-contact div { float: left; }
+#text-contact-space { word-spacing: 20px; } /* Define o tamanho de espaço entre 'Contact' e 'me!' */
+
+
+#bottom-social-media {
+    margin-left: 21px;
+    display: flex;
+    flex-direction: row;
+
+    overflow: hidden;
+}
+.socials {
+    margin-right: 27px;
+
+    font-family: 'Oddlini';
+    font-weight: 600;
+    font-size: 16px;
+}
+/* -------- <HOME PAGE CONTENT -------- */
+
+
+
+
+
+
+
+
+
+
+
+
+/* -------- WORKS PAGE CONTENT> -------- */
+.works-title-section{
+    padding-top: 90px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+
+    font-family: 'Hagrid';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 66px;
+    color: var(--color-text-dark);
+}
+.works-title-section img {
+    margin-right: 4.5vw;
+    height: 96px;
+    width: auto;
+    transform: translateY(35px);
+}
+.works-title-section h1 {
+    margin-right: 38px;
+}
+
+.works-list-section { padding-top: 90px; }
+.works-list { width: 100%; }
+.works-list li div { display:inline; /* float:left; */; padding-bottom: 35px; }
+.works-list li { 
+    list-style-type: none;
+    padding: 0 120px;
+    display: grid;
+    grid-template-columns: min-content 1fr min-content; 
+}
+
+.works-list li div:nth-child(1) {
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 21px;
+
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 10px;
+}
+.works-list li div:nth-child(2) {
+    font-family: 'Hagrid';
+    font-style: italic;
+    font-weight: normal;
+    font-size: 70px;  
+
+    padding-left: 30px;
+}
+.works-list li div:nth-child(2):hover {
+    /* transform: skewX(-15deg); */
+    text-decoration: underline;
+    text-decoration-thickness: 5px;
+    text-underline-offset: 4px;
+}
+.works-list li div:nth-child(3) {
+    font-family: 'Oddlini';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+
+    display: flex;
+    align-items: flex-start;
+    margin-top: 34px;
+}
+/* -------- <WORKS PAGE CONTENT -------- */
