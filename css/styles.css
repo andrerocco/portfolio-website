@@ -554,10 +554,10 @@ a { color: inherit; text-decoration: inherit; } /* Limpa os pré-estilos dos ele
     padding-left: 30px;
 }
 .works-list li div:nth-child(2):hover {
-    /* transform: skewX(-15deg); */
-    text-decoration: underline;
+    transform: skewX(-15deg);
+    /* text-decoration: underline;
     text-decoration-thickness: 5px;
-    text-underline-offset: 4px;
+    text-underline-offset: 4px; */
 }
 .works-list li div:nth-child(3) {
     font-family: 'Oddlini';
